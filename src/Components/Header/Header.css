@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #1c2b35;
+  padding: 0 5%;
+  height: 80px;
+}
+.nav {
+  display: flex;
+}
+.nav > li {
+  list-style: none;
+}
+.nav > li > a {
+  text-decoration: none;
+  color: white;
+  padding: 0 10px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 20px;
+}
