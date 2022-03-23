@@ -1,18 +1,17 @@
-.card-container {
-  padding-left: 22px;
+.cart-container {
+  position: sticky;
+  top: 0;
 }
 .title {
   text-align: center;
   color: #1c2b35;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 25px;
   line-height: 30px;
+  margin-bottom: 50px;
 }
-.card-body {
-  font-weight: 400;
-  font-size: 25px;
-  line-height: 30px;
-  color: #1c2b35;
+.cart-body {
+  padding-left: 22px;
 }
 .cart-info {
   font-weight: 450;
@@ -25,5 +24,5 @@
   font-size: 22px;
   line-height: 25px;
   color: #0e161a;
-  margin-top: 50px;
+  margin-top: 30px;
 }

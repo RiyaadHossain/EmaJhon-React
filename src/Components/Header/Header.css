@@ -16,7 +16,11 @@
   text-decoration: none;
   color: white;
   padding: 0 10px;
-  font-weight: 400;
+  font-weight: 450;
   font-size: 17px;
   line-height: 20px;
+}
+.nav > li > a:hover{
+  color: orange;
+  transition:linear .5s;
 }

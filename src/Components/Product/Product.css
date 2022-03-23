@@ -48,6 +48,10 @@
   align-items: center;
   justify-content: center;
 }
+.btn:hover{
+  background-color: #f3b75d;
+  transition: linear .5s;
+}
 .btn > p{
   margin-right: 8px;
 }
