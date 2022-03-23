@@ -30,10 +30,20 @@ const Products = () => {
     }, [products])
     
     
-    const func = (product) => {
-        const updatedItem = [...selectedItem, product]
+    const func = (selectedProduct) => {
+        let updatedItem = [];
+        const exist = products.find(product => product.id === selectedProduct.id)
+        if (!exist) { 
+            selectedProduct.quantity = 1
+            updatedItem = [...selectedItem, selectedProduct]
+        }
+        else {
+            const rest = products.filter(product => product.id !== selectedProduct.id)
+            exist.quantity = exist.quantity + 1
+            updatedItem = [...rest, exist]
+        }
         setSelectedItem(updatedItem)
-        addToDb(product.id)
+        addToDb(selectedProduct.id)
     }
 
     
