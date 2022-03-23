@@ -16,7 +16,7 @@ const Product = ({product, func}) => {
                     <p>Ratting: {ratings} ⭐</p>
                 </div>
             </div>
-            <button onClick={func} className='btn'><p>Add to Cart</p><FontAwesomeIcon icon={faShoppingCart } /></button>
+            <button onClick={() => func(product)} className='btn'><p>Add to Cart</p><FontAwesomeIcon icon={faShoppingCart } /></button>
         </div>
     );
 };

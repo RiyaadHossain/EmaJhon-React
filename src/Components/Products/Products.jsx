@@ -10,10 +10,12 @@ const Products = () => {
         .then(res=> res.json())
         .then(data => setProducts(data))
     }, [])
-    const [selectedItem, setSelectedItem] = useState(0)
-    const func = () => {
-        setSelectedItem(selectedItem + 1)
+    const [selectedItem, setSelectedItem] = useState([])
+    const func = (product) => {
+        const updatedItem = [...selectedItem, product]
+        setSelectedItem(updatedItem)
     }
+    
     return (
         <div className='shopping-layout'>
             <div className="products">
