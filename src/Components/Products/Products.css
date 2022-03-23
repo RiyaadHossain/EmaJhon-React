@@ -1,0 +1,13 @@
+.shopping-layout{
+    display: grid;
+    grid-template-columns: 5.8fr 1fr;
+}
+.products{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 45px;
+}
+.cart{
+    background: rgba(255, 153, 0, 0.3);
+    padding-left: 23px;
+}
