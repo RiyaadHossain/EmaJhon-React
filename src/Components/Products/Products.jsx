@@ -6,6 +6,8 @@ import './Products.css'
 
 const Products = () => {
     const [products, setProducts] = useState([])
+    const [selectedItem, setSelectedItem] = useState([])
+    
     useEffect(() => {
         fetch('products.json')
         .then(res=> res.json())
@@ -14,13 +16,20 @@ const Products = () => {
     
     useEffect(() => {
         const storedItem = getCartItem()
+        let newCart = [];
         for (const id in storedItem) {
             const storedPro = products.find(product => product.id === id)
-            console.log(storedPro);
+            if (storedPro) {
+                const quantity = storedItem[id]
+                storedPro.quantity = quantity
+                newCart.push(storedPro)
+            }
         }
+        console.log(newCart);
+        setSelectedItem(newCart)
     }, [products])
     
-    const [selectedItem, setSelectedItem] = useState([])
+    
     const func = (product) => {
         const updatedItem = [...selectedItem, product]
         setSelectedItem(updatedItem)
