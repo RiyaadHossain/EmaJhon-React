@@ -25,7 +25,6 @@ const Products = () => {
                 newCart.push(storedPro)
             }
         }
-        console.log(newCart);
         setSelectedItem(newCart)
     }, [products])
     

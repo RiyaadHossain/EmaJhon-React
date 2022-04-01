@@ -13,7 +13,7 @@ const Product = ({product, func}) => {
                 <p className='product-price'>Price: ${price}</p>
                 <div className='extra-info'>
                     <p>Manufacturer: {seller}</p>
-                    <p>Ratting: {ratings} ⭐</p>
+                    <p>Ratting: {ratings}⭐</p>
                 </div>
             </div>
             <button onClick={() => func(product)} className='btn'><p>Add to Cart</p><FontAwesomeIcon icon={faShoppingCart } /></button>
